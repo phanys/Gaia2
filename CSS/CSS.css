@@ -1,6 +1,7 @@
 :root {
   --azul-escuro: #243642;
   --azul-mar:#387478;
+  --verde: #1a3b27; 
   --azul-esverdeado:#629584;
   --azul-branco:#e2f1e7;
   --cinza:#b5b5b5;
@@ -217,4 +218,32 @@ width: 100%;
   text-align: center !important;
 }
   
+.water-img-about-us{
+  width: 100%;
+}
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--verde); /* Fundo da faixa */
+  color: #ffffff; /* Cor do texto */
+  font-size: 1.5rem;
+  padding: 20px 0;
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+/* Animação para mover o texto */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
   
