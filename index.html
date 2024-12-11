@@ -1,66 +1,279 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consumo de Água</title>
-    <link rel="stylesheet" href="css/estilo.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/function.js"></script>
+    <title>Gaia</title>
+    <link rel="stylesheet" href="../CSS/CSS.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body class="body">
-    <div class="main-content">
-        <div class="container">
-            <h1 class="text-center" style="color:aliceblue">Consumo de Água</h1>
-            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card p-4">
-                            <h3 class="text-center">Banho Diário</h3>
-                            <div class="form-group mb-3">
-                                <label for="minutosDiarios" class="form-label">Tempo de banho diário (minutos):</label>
-                                <input type="number" id="minutosDiarios" class="form-control" step="1" placeholder="Ex: 30">
-                            </div>
-                            <button class="btn btn-primary w-100" onclick="calcularBanho()">Calcular Consumo</button>
-                            <div id="resultadoBanho" class="mt-3 text-center"></div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card p-4" id="card">
-                            <h3 class="text-center">Lavar Louça</h3>
-                            <div class="form-group mb-3">
-                                <label for="tempoLouca" class="form-label">Tempo gasto (minutos):</label>
-                                <input type="number" id="tempoLouca" class="form-control" step="1" placeholder="Ex: 15">
-                            </div>
-                            <button class="btn btn-success w-100" onclick="calcularLouca()">Calcular Consumo</button>
-                            <div id="resultadoLouca" class="mt-3 text-center"></div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card p-4">
-                            <h3 class="text-center">Máquina de Lavar</h3>
-                            <div class="form-group mb-3">
-                                <label for="ciclos" class="form-label">Número de ciclos por mês:</label>
-                                <input type="number" id="ciclos" class="form-control" step="1" placeholder="Ex: 10">
-                            </div>
-                            <button class="btn btn-info w-100" onclick="calcularLavadora()">Calcular Consumo</button>
-                            <div id="resultadoLavadora" class="mt-3 text-center"></div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Próximo</span>
-                </button>
-            </div>
+  <body>
+    
+    
+    <!-- -->
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-sm navbar-light bg fixed-top" style="display: flex; height: 5em;">
+        <a class="navbar-brand" href="#"><img src="./IMG/logo-GAIA.png" class="logo"> </a>
+        <div class="" id="navbarNavDropdown" style="align-self:center; width: 100%; justify-content:center!important;" >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="link" href="#">Home<span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="link" href="#aboutUs">Sobre nós</a>
+            </li>
+            <li class="nav-item">
+              <a class="link" href="./js.html">Serviços</a>
+            </li>
+              <li class="nav-item">
+                <a class="link" href="#footer">Contato</a>
+              </li>
+
+           <!--<li class="nav-item dropdown">
+              <a class="link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>--> 
             
+          </ul>
+        </div>
+      </nav>
+    <!-- FIM NAVBAR -->
+
+    <!-- Carrosel-->
+    <div id="carouselExampleCaptions" class="carousel slide" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./IMG/slider-1.jpg" class="d-block w-100" alt="..." style="height: 80vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Preservar é o Primeiro Passo</h5>
+            <p>Descubra como pequenas ações podem causar um grande impacto na gestão sustentável da água</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./IMG/slider-2.jpg" class="d-block w-100" alt="..." style="height: 80vh;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>A Água e o Meio Ambiente</h5>
+            <p>Entenda a relação vital entre a conservação dos recursos hídricos e a biodiversidade ao nosso redor.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./IMG/slider-3.jpg" class="d-block w-100" alt="..." style="height: 80vh;" >
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Transforme Consciência em Ação</h5>
+            <p>Junte-se à nossa missão para promover o uso eficiente da água em Atibaia e regiões vizinhas.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Fim carrosel-->
+
+
+
+    <!-- Chamada Sobre nós-->
+
+    <div class="container" id="aboutUs" style="background-color: #ecf1ee; color: #243642;">
+      <div class="container text-left" >
+        <div class="row" >
+          <div class="col" style="margin-top: 70px; margin-left: 200px; align-items: center; align-self: center;" >
+              <h2>O que o Gaia?</h2>
+              <p>Somos uma equipe comprometida em promover a conscientização e a adoção de práticas sustentáveis relacionadas ao uso da água, com foco em Atibaia e regiões próximas. A ideia surgiu da preocupação com os desafios do consumo de água enfrentados pela região, intensificados pelo crescimento populacional e econômico. Nosso objetivo é oferecer uma plataforma educativa e acessível, onde a comunidade possa encontrar orientações práticas para reduzir o desperdício, reutilizar a água de forma segura e incorporar a sustentabilidade ao cotidiano. Acreditamos que pequenas mudanças podem gerar grandes impactos, e estamos aqui para inspirar ações que preservem nossos recursos hídricos para as futuras gerações.
+              </p>  
+          </div>
+          <div class="col" style="margin: 115px;">
+            <img src="./IMG/water.png" class="water-img-about-us" alt="..." > <!--style="width: 296px; height: 256px; margin-top: 813px; margin-left: 785px ;"-->
+          </div>
         </div>
     </div>
-</body>
+    <!-- Fim chamada Sobre nós-->
+
+    <div class="marquee">
+      <div class="marquee-content">
+        SUSTENTABILIDADE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CONSCIENTIZAÇÃO &nbsp;&nbsp;&nbsp; INOVAÇÃO &nbsp;&nbsp; PRESERVAÇÃO &nbsp;&nbsp; EFICIÊNCIA &nbsp;&nbsp; RESPONSABILIDADE &nbsp;&nbsp; EDUCAÇÃO
+
+      </div>
+    </div>
+
+
+
+    <!--Frase de efeito -->
+    
+    <div class="container text-center" id="effectPhrase" style="background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./IMG/backgroundPhrase.png); background-repeat: no-repeat; background-size: cover; height: 400px; display: flex; justify-content: center; align-items: center;">
+      <div class="row">
+        <div class="col">
+          <img src="./IMG/lastTryLine.png" alt="line" > 
+        </div>
+        <div class="col-6">
+          <h1 style="color:#e2f1e7;">Pequenos atos, grandes impactos!</h1>
+        </div>
+        <div class="col">
+          <img src="./IMG/lastTryLine.png" alt="line" >
+        </div>
+      </div>
+    </div>
+    
+    <!--Fim frase de efeito-->
+
+    <!-- Caixa de icones-->
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 6em; background-color:#e2f1e7;">
+      <div class="col">
+        <div class="card h-100">
+          <img src="./IMG/Icone-GAIA.png" class="card-img-top" alt="..." style="width: 50%; display: flex; align-self: center;">
+          <div class="card-body">
+            <h5 class="card-title">Educação Ambiental</h5>
+            <p class="card-text">Promovemos o conhecimento sobre o uso sustentável da água, com materiais e dicas práticas para todos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="../IMG/Icone-GAIA.png" class="card-img-top" alt="..." style="width: 50%; display: flex; align-self: center;">
+          <div class="card-body" >
+            <h5 class="card-title">Consultoria Especializada</h5>
+            <p class="card-text">Ajudamos empresas, indústrias e agricultores a adotarem práticas de gestão eficiente dos recursos hídricos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="../IMG/Icone-GAIA.png" class="card-img-top" alt="..." style="width: 50%; display: flex; align-self: center;">
+          <div class="card-body">
+            <h5 class="card-title">Ferramentas Interativas</h5>
+            <p class="card-text">Explore calculadoras de consumo e recursos que ajudam a planejar o uso consciente da água.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+      <!--Fim Caixa de icones -->
+
+
+      <!--Depoimentos-->
+      <div class="testimonials" style="background-color: #e2f1e7;">
+        <div class="testimonial" style="background-color:#fff;" >
+          <p class="testimonial-text">"Com a ajuda da GAIA, conseguimos reduzir nosso consumo de água em 30% na empresa. O suporte e as ferramentas interativas fizeram toda a diferença!"</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50" alt="Foto de João Silva">
+            <div>
+              <h4>Ana Silva</h4>
+              <p>Gerente de Sustentabilidade</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="testimonial" style="background-color:#fff;">
+          <p class="testimonial-text">"Aprendi muito sobre como pequenas mudanças no dia a dia podem impactar o meio ambiente. O conteúdo educativo é claro e inspirador!"</p>
+          <div class="testimonial-author">
+            <img src="https://via.placeholder.com/50" alt="Foto de Maria Oliveira">
+            <div>
+              <h4>João Pereira</h4>
+              <p>Professor de Ciências Ambientais</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial" style="background-color:#fff;">
+            <p class="testimonial-text">"Como agricultora, sempre busquei formas de economizar água. A consultoria da GAIA me ajudou a implementar sistemas mais eficientes."</p>
+            <div class="testimonial-author">
+              <img src="https://via.placeholder.com/50" alt="Foto de Maria Oliveira">
+              <div>
+                <h4>Maria Oliveira</h4>
+                <p>Produtora Rural</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial" style="background-color:#fff;">
+            <p class="testimonial-text">"A plataforma da GAIA é incrível! Usei a calculadora de consumo e percebi onde estava desperdiçando água em casa. Muito útil!"</p>
+            <div class="testimonial-author">
+              <img src="https://via.placeholder.com/50" alt="Foto de Maria Oliveira">
+              <div>
+                <h4>Carlos Almeida</h4>
+                <p>Engenheiro Civil</p>
+              </div>
+            </div>
+          </div>
+
+
+      </div>
+
+
+      <!--Fim depoimentos-->
+
+
+
+      <!--Footer-->
+      <div class="container" id="footer">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 myfot border-top footer" style="background-image: url(./IMG/backgound-icon.png);">
+          <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+              <img src="./IMG/logo-GAIA.png" class="logo"> 
+            </a>
+            <p class="text-body-secondary1 secundario">&copy; 2024</p>
+          </div>
+      
+          <div class="col mb-3">
+      
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Explore</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1">Home</a></li>
+              <li class="nav-item mb-2"><a href="#aboutUs" class="nav-link p-0 text-body-secondary1">Sobre nós</a></li>
+              <li class="nav-item mb-2"><a href="./js.html" class="nav-link p-0 text-body-secondary1">Serviços</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3" >
+            <h5>Contato</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1"><i class="bi bi-telephone-fill me-2"></i>(11) 98765-4321</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1"> <i class="bi bi-geo-alt-fill me-2"></i>Rua das Águas Claras, 123 - Centro, Atibaia, SP, CEP: 12940-000
+              </a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1">  <i class="bi bi-envelope-fill me-2"></i>contato@gaiaecoagua.com</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3">
+            <h5>Valores</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1 ">Sustentabilidade </a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1">Inovação</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1">Conscientização</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1">Transparência</a></li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+ 
+      <!--Fim Footer-->
+
+
+
+
+    <!--Script bootstrap-->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+   <!--FIM Script bootstrap-->
+  </body>
 </html>
