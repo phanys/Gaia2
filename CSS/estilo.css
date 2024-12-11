@@ -1,0 +1,28 @@
+.body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #56878b;
+    display: flexbox, flex;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+
+}
+.main-content {
+    margin-left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.btn btn-primary w-100{
+    display: flex;
+}
+.btn btn-success w-100{
+    display: flex;
+}
+.btn btn-info w-100{
+    display: flex;
+}

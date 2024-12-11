@@ -13,7 +13,7 @@
     
     <!-- -->
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg" style="display: flex;">
+    <nav class="navbar navbar-expand-sm navbar-light bg fixed-top" style="display: flex; height: 5em;">
         <a class="navbar-brand" href="#"><img src="./IMG/logo-GAIA.png" class="logo"> </a>
         <div class="" id="navbarNavDropdown" style="align-self:center; width: 100%; justify-content:center!important;" >
           <ul class="navbar-nav">
@@ -24,10 +24,10 @@
               <a class="link" href="#aboutUs">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="link" href="#">Serviços</a>
+              <a class="link" href="./index.html">Serviços</a>
             </li>
               <li class="nav-item">
-                <a class="link" href="#">Contato</a>
+                <a class="link" href="#footer">Contato</a>
               </li>
 
            <!--<li class="nav-item dropdown">
@@ -91,11 +91,11 @@
 
     <!-- Chamada Sobre nós-->
 
-    <div class="container" id="aboutUs">
+    <div class="container" id="aboutUs" style="background-color: #ecf1ee; color: #243642;">
       <div class="container text-left" >
         <div class="row" >
           <div class="col" style="margin-top: 70px; margin-left: 200px; align-items: center; align-self: center;" >
-              <h2>Sobre a GAIA</h2>
+              <h2>O que o Gaia?</h2>
               <p>Somos uma equipe comprometida em promover a conscientização e a adoção de práticas sustentáveis relacionadas ao uso da água, com foco em Atibaia e regiões próximas. A ideia surgiu da preocupação com os desafios do consumo de água enfrentados pela região, intensificados pelo crescimento populacional e econômico. Nosso objetivo é oferecer uma plataforma educativa e acessível, onde a comunidade possa encontrar orientações práticas para reduzir o desperdício, reutilizar a água de forma segura e incorporar a sustentabilidade ao cotidiano. Acreditamos que pequenas mudanças podem gerar grandes impactos, e estamos aqui para inspirar ações que preservem nossos recursos hídricos para as futuras gerações.
               </p>  
           </div>
@@ -123,7 +123,7 @@
           <img src="./IMG/lastTryLine.png" alt="line" > 
         </div>
         <div class="col-6">
-          <h1 style="color:snow;">Pequenos atos, grandes impactos!</h1>
+          <h1 style="color:#e2f1e7;">Pequenos atos, grandes impactos!</h1>
         </div>
         <div class="col">
           <img src="./IMG/lastTryLine.png" alt="line" >
@@ -134,7 +134,7 @@
     <!--Fim frase de efeito-->
 
     <!-- Caixa de icones-->
-    <div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 6em; background-image: url(./IMG/backgound-icon.png);">
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="padding: 6em; background-color:#e2f1e7;">
       <div class="col">
         <div class="card h-100">
           <img src="./IMG/Icone-GAIA.png" class="card-img-top" alt="..." style="width: 50%; display: flex; align-self: center;">
@@ -147,7 +147,7 @@
       <div class="col">
         <div class="card h-100">
           <img src="../IMG/Icone-GAIA.png" class="card-img-top" alt="..." style="width: 50%; display: flex; align-self: center;">
-          <div class="card-body">
+          <div class="card-body" >
             <h5 class="card-title">Consultoria Especializada</h5>
             <p class="card-text">Ajudamos empresas, indústrias e agricultores a adotarem práticas de gestão eficiente dos recursos hídricos.</p>
           </div>
@@ -168,8 +168,8 @@
 
 
       <!--Depoimentos-->
-      <div class="testimonials">
-        <div class="testimonial">
+      <div class="testimonials" style="background-color: #e2f1e7;">
+        <div class="testimonial" style="background-color:#fff;" >
           <p class="testimonial-text">"Com a ajuda da GAIA, conseguimos reduzir nosso consumo de água em 30% na empresa. O suporte e as ferramentas interativas fizeram toda a diferença!"</p>
           <div class="testimonial-author">
             <img src="https://via.placeholder.com/50" alt="Foto de João Silva">
@@ -180,7 +180,7 @@
           </div>
         </div>
       
-        <div class="testimonial">
+        <div class="testimonial" style="background-color:#fff;">
           <p class="testimonial-text">"Aprendi muito sobre como pequenas mudanças no dia a dia podem impactar o meio ambiente. O conteúdo educativo é claro e inspirador!"</p>
           <div class="testimonial-author">
             <img src="https://via.placeholder.com/50" alt="Foto de Maria Oliveira">
@@ -191,7 +191,7 @@
           </div>
         </div>
 
-        <div class="testimonial">
+        <div class="testimonial" style="background-color:#fff;">
             <p class="testimonial-text">"Como agricultora, sempre busquei formas de economizar água. A consultoria da GAIA me ajudou a implementar sistemas mais eficientes."</p>
             <div class="testimonial-author">
               <img src="https://via.placeholder.com/50" alt="Foto de Maria Oliveira">
@@ -202,7 +202,7 @@
             </div>
           </div>
 
-          <div class="testimonial">
+          <div class="testimonial" style="background-color:#fff;">
             <p class="testimonial-text">"A plataforma da GAIA é incrível! Usei a calculadora de consumo e percebi onde estava desperdiçando água em casa. Muito útil!"</p>
             <div class="testimonial-author">
               <img src="https://via.placeholder.com/50" alt="Foto de Maria Oliveira">
@@ -222,7 +222,7 @@
 
 
       <!--Footer-->
-      <div class="container">
+      <div class="container" id="footer">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 myfot border-top footer" style="background-image: url(./IMG/backgound-icon.png);">
           <div class="col mb-3">
             <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
@@ -239,9 +239,8 @@
             <h5>Explore</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1">Sobre nós</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary1">Serviços</a></li>
-              <li class="nav-item mb-2"><a href="#/" class="nav-link p-0 text-body-secondary1">Contato</a></li>
+              <li class="nav-item mb-2"><a href="#aboutUs" class="nav-link p-0 text-body-secondary1">Sobre nós</a></li>
+              <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary1">Serviços</a></li>
             </ul>
           </div>
       

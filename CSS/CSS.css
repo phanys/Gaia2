@@ -3,7 +3,7 @@
   --azul-mar:#387478;
   --verde: #1a3b27; 
   --azul-esverdeado:#629584;
-  --azul-branco:#e2f1e7;
+  --azul-branco:#ecf1ee;
   --cinza:#b5b5b5;
 }
 
@@ -116,7 +116,11 @@ width: 100%;
 }
 
 .card-title{
-  color: black !important;
+  color: #243642 !important;
+}
+
+.card-text{
+  color: #243642 !important; 
 }
 
 .card-deck{
@@ -153,7 +157,7 @@ width: 100%;
   
   /* Cada box de depoimento */
   .testimonial {
-    background-color: #f9f9f9;
+    /*background-color: var(--azul-branco);*/
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1.5rem;
@@ -226,8 +230,8 @@ width: 100%;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
-  background-color: var(--verde); /* Fundo da faixa */
-  color: #ffffff; /* Cor do texto */
+  background-color: var(--azul-branco); /* Fundo da faixa */
+  color: var(--azul-escuro); /* Cor do texto */
   font-size: 1.5rem;
   padding: 20px 0;
 }
